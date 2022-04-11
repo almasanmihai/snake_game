@@ -22,7 +22,7 @@ screen.onkey(snake.right, "Right")
 is_on = True
 while is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.15)
     snake.move()
 
     if snake.head.distance(food) < 15:
