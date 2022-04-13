@@ -31,11 +31,14 @@ while is_on:
         snake.add_segment()
     if snake.head.xcor() > 290 or snake.head.ycor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() < -290:
         is_on = False
+        scoreboard.reset_score()
+        snake.reset_snake()
         scoreboard.game_over()
-
     for seg in snake.segments[1:]:
         if snake.head.distance(seg) < 10:
             is_on = False
+            scoreboard.reset_score()
+            snake.reset_snake()
             scoreboard.game_over()
 
 
